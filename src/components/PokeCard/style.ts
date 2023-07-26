@@ -104,6 +104,9 @@ export const Card = styled.div<TypeTitleProps>`
         height: 100px;
         border-radius: 0;
         justify-content: space-around;
+        &:hover{
+            transform: scale(1);
+        };
         
     };
 `;  

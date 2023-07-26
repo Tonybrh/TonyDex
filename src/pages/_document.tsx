@@ -36,7 +36,12 @@ export default class MyDocument extends Document {
   render(){
     return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <meta 
+          name='description'
+          content='TonyDex feita por Antônio Eduardo, confira já !'
+          />
+      </Head>
       <body>
         <Main />
         <NextScript />
