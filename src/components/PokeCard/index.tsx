@@ -114,7 +114,7 @@ export default function PokeCard() {
         </LoadingContainer>
                 <PokeCardContainer onClick={handleClick}>
             {pokeImage.map((imageUrl, index) => ( // usa o novo array com as URLs das imagens no .map()
-            <MediaLink href={`pokemon/${id[index]}`}>
+            <MediaLink href={`pokemon/${id[index]}`} key={index}>
           
           <Card type={pokeType1[index] as keyof TypeColors} key={index}>
             <Image src={imageUrl} width={100} height={100} alt={`Imagem do ${pokeName[index]}`} />

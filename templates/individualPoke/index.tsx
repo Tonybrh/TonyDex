@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Abilitie, AbilitiesContainer, Container, PokeContainer, PokeIdentificationDiv, PokeName, PokeStatusDiv, PokeType, PokemonDiv } from "./style";
+import { Abilitie, AbilitiesContainer, CloseButton, CloseIcon, Container, PokeContainer, PokeIdentificationDiv, PokeName, PokeStatusDiv, PokeType, PokemonDiv } from "./style";
 import NavBar from "src/components/NavBar";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -42,16 +42,17 @@ interface Ability {
     name: string
 }
 export default function IndividualPoke({pokeName, pokeImage, pokeAbility, pokeNumber, pokeType}:IndividualPokeProps) {
-    
-    const pokeAbilities = pokeType.map((ability, index:number) =>{
-        return ability.type.name
-    })
-    console.log(pokeAbilities);
+    const handleClosePoke = () => {
+        window.location.href = '/'
+    }
     return(
         <Container>
             <NavBar />
             <PokeContainer>
                 <PokemonDiv>
+                <CloseButton onClick={handleClosePoke}>
+                    <CloseIcon />
+                </CloseButton>
                     <PokeIdentificationDiv>
                         <PokeName>N° 000{pokeNumber}</PokeName>
                         <Image src={pokeImage} width={200} height={200} alt="Imagem do pokemon"/>
@@ -61,13 +62,13 @@ export default function IndividualPoke({pokeName, pokeImage, pokeAbility, pokeNu
                         ABILITIES
                         <AbilitiesContainer>
                             {pokeAbility.map((ability, index:number)=>(
-                            <Abilitie>{ability.ability.name}</Abilitie>
+                            <Abilitie key={index}>{ability.ability.name}</Abilitie>
                         ))}
                         </AbilitiesContainer>
                         TYPES
                         <AbilitiesContainer>
                             {pokeType.map((types, index:number) =>(
-                                <PokeType type={types.type.name as keyof TypeColors} >{types.type.name}</PokeType>
+                                <PokeType key={index} type={types.type.name as keyof TypeColors} >{types.type.name}</PokeType>
                             ))}
                         </AbilitiesContainer>
                     </PokeStatusDiv>

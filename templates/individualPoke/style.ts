@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { AiOutlineClose } from "react-icons/ai";
 type TypeColors = {
     normal: string;
     fire: string;
@@ -119,4 +120,14 @@ export const PokeType = styled.p<TypeTitleProps>`
     text-align: center;
     color: white;
     border-radius: 5px;
+`
+export const CloseIcon = styled(AiOutlineClose)`
+    width: 20px;
+    height: 20px;
+`
+export const CloseButton = styled.button`
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    cursor: pointer;
 `

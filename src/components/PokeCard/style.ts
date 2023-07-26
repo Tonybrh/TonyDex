@@ -96,7 +96,7 @@ export const Card = styled.div<TypeTitleProps>`
     &:hover{
         transform: scale(1.1);
         transition: transform 0.3s;
-        background-color: ${props => typeColors.hasOwnProperty(props.type) ? typeColors[props.type] : 'gray'};;
+        background-color: ${props => typeColors.hasOwnProperty(props.type) ? typeColors[props.type] : 'gray'};
         color: white;
     }
     @media (max-width: 550px){
@@ -104,7 +104,7 @@ export const Card = styled.div<TypeTitleProps>`
         height: 100px;
         border-radius: 0;
         justify-content: space-around;
-        pointer-events: none;
+        
     };
 `;  
 export const CardP = styled.p`

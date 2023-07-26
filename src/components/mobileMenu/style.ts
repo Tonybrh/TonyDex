@@ -27,8 +27,8 @@ export  const ModalContainer = styled.div`
 `
 export const PokeLogo = styled.h1`
     font-size: 36px;
-    color: #d84444;
-    margin-top: 20px;
+    color: black;
+    margin-top: 40px;
     margin-bottom: 200px;
 `;
 export const ModalLinksUl = styled.ul`
@@ -46,10 +46,10 @@ export const ModalLi = styled.li`
 export const PokeIcon = styled(MdCatchingPokemon)`
     width: 20px;
     height: 20px;
-    color: #d84444;
+    color: black;
 `
 export const MediaLink = styled(Link)`
-    color: #d84444;
+    color: black;
     text-decoration: none;
 `
 export const CloseButton = styled.button`
@@ -64,5 +64,5 @@ export const CloseButton = styled.button`
 export const CloseIcon = styled(AiOutlineClose)`
     width: 30px;
     height: 30px;
-    color: #d84444;
+    color: black;
 `
